@@ -1,37 +1,35 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <!-- 컴포넌트 네이밍 컨벤션 종류 -->
-    <!-- 케밥 케이스 -->
-    <hello-world></hello-world>
-    <!-- 파스칼 케이스 -->
-    <HelloWorld></HelloWorld>
-    <!-- 파스칼 케이스 -->
-    <HelloWorld/>
+  <div>
+    <!-- <app-header 
+    v-bind:프롭스 속성 이름(AppHeader.vue)="상위 컴포넌트(App.vue)의 데이터 이름"
+    v-on:하위 컴포넌트에서 올라온 이벤트 이름="상위 컴포넌트의 메소드 이름"></app-header>-->
+    <app-header v-bind:propsdata="str" v-on:renew="renewStr"></app-header>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
-// export default = new Vue 라고 볼 수 있다
+import AppHeader from "./components/AppHeader";
+// new Vue({
+//   data: {
+//     str: hi
+//   }
+// })
+// 위와 아래는 동일하다
 export default {
-  // 인스턴스 옵션 속성 또는 컴포넌트 옵션 속성을 넣어 사용한다
-  name: 'App',
+  data: function() {
+    return {
+      str: "App Header"
+    };
+  },
   components: {
-    HelloWorld
+    "app-header": AppHeader
+  },
+  methods: {
+    renewStr: function() {
+      this.str = "hi";
+    }
   }
-}
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style></style>
