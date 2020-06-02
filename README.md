@@ -2,6 +2,7 @@
 
 [강의실 바로가기 🔗](https://www.inflearn.com/course/Age-of-Vuejs/lecture/21333)
 
+📓 NOTE'S
 * [개발 환경 설정](https://www.notion.so/45c64937cf92445bad79747cae6d891e)
 * [Vue.js 소개](https://www.notion.so/Vue-js-ab04c8e2175d489e88ff5ad9609eb4c7)
 * [인스턴스](https://www.notion.so/adf1f7fc62624eeebd62ae974be64685)
